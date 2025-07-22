@@ -34,7 +34,6 @@ graph TB
     
     subgraph "🔧 Backend Services"
         I[Rust Backend]
-        J[Python Backend]
         K[Piper TTS]
         L[llama.cpp]
     end
@@ -52,7 +51,7 @@ graph TB
     F --> G
     G --> L
     I --> L
-    J --> K
+    I --> K
     F --> H
     H --> M
     H --> N
@@ -80,10 +79,10 @@ graph TB
                       │
 ┌─────────────────────┴───────────────────────────────────────┐
 │              🔧 Native Backend Services                     │
-│  ┌─────────────┐ ┌─────────────┐ ┌─────────────────────────┐ │
-│  │    Rust     │ │   Python    │ │      Piper TTS          │ │
-│  │   Backend   │ │   Backend   │ │     (Optional)          │ │
-│  └─────────────┘ └─────────────┘ └─────────────────────────┘ │
+│  ┌─────────────┐ ┌─────────────────────────────────────────┐ │
+│  │    Rust     │ │             Piper TTS                   │ │
+│  │   Backend   │ │            (Integrated)                 │ │
+│  └─────────────┘ └─────────────────────────────────────────┘ │
 └─────────────────────┬───────────────────────────────────────┘
                       │
 ┌─────────────────────┴───────────────────────────────────────┐
@@ -103,7 +102,7 @@ graph TB
 | **UI Framework** | Material 3 | Modern, accessible design |
 | **AI Model** | Gemma Sutra 3B (GGUF) | Local Islamic-trained LLM |
 | **TTS Engine** | Flutter TTS + Piper | Multi-language voice synthesis |
-| **Backend** | Rust + Python | High-performance native processing |
+| **Backend** | Rust | High-performance native processing |
 | **Database** | SQLite | Local data persistence |
 | **Model Runtime** | llama.cpp | Efficient GGUF model inference |
 | **Knowledge Base** | JSON + SQLite | Quran, Hadith, Duʿā storage |
@@ -223,9 +222,7 @@ akhi/
 ├── rust-backend/              # Rust native backend
 │   ├── src/lib.rs            # Rust FFI interface
 │   └── Cargo.toml            # Rust dependencies
-├── python-backend/            # Python TTS backend
-│   ├── main.py               # Python TTS server
-│   └── requirements.txt      # Python dependencies
+
 ├── assets/                    # App assets and data
 │   ├── islamic_data/         # Quran, Hadith, Duʿā
 │   └── models/               # AI model files (gitignored)

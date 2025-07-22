@@ -64,7 +64,3 @@ piper-tts/
 *.so
 *.dylib
 rust_backend.dll
-
-# Python backend cache
-python-backend/__pycache__/
-python-backend/*.pyc
