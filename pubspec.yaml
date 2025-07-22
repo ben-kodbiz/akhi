@@ -1,0 +1,30 @@
+name: akhi_app
+description: An offline AI companion app for Muslim men, built in Flutter.
+
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management and local storage
+  flutter_riverpod: ^2.0.0
+  sqflite: ^2.2.0+3
+  path_provider: ^2.0.11
+  
+  # FFI for Rust backend integration
+  ffi: ^2.1.0
+  
+  # Text-to-Speech
+  flutter_tts: ^4.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
